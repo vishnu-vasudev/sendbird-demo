@@ -16,7 +16,7 @@
 
 .container {
   margin-top: 50px;
-  height: 500px;
+  height: 600px;
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
@@ -26,13 +26,13 @@
   text-align: center;
   color: cadetblue;
   border-bottom: 1px solid lightgrey;
+  margin-bottom: 0px;
 }
 
 .channel-list {
   width: 20%;
   overflow: scroll;
   background-color: white;
-  border-radius: 10px;
   border: 1px solid #f5f5f5;
 
 }
@@ -40,21 +40,21 @@
 .channel-name {
   background-color: white;
   margin-bottom: 0;
-  margin-top: 5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 65px;
   text-align: center;
   color: black;
-  border-bottom: 1px #f5f5f5 solid;
+  border-bottom: 3px #f5f5f5 solid;
 }
 
 .group-name {
-  background-color: cadetblue;
-  color: white;
+  background-color: white;
+  color: black;
+  border-bottom: 1px grey solid;
+  padding-left: 40px;
   margin-top: 0px;
-  justify-content: center;
-  border-radius: 5px;
-  height: 55px;
+  height: 53px;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -69,8 +69,8 @@
 
 .msg-container {
   width: 60%;
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  background-color: #f4f4f4;
+  border-left: 1px black solid;
 }
 
 .messages {
@@ -80,16 +80,26 @@
   padding-left: 30px;
 }
 
-.single-msg {
-  background-color: #330066;
-  color: white;
+.receiving-msg {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  /* padding-top: 2px;
-  padding-bottom: 3px; */
-  border-style: none;
-  font-weight: lighter;
+  font-size: 15px;
+  background-color: #bebebe;
+  align-self: flex-start;
+}
+
+.sending-msg {
+  background-color: #007ed4;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+  margin-right: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 .input-msg {
@@ -98,8 +108,8 @@
 
 .msg-input-box {
   border-style: none;
-  height: 30px;
-  width: 300px;
+  height: 60px;
+  width: 90%;
   border-radius: 10px;
 }
 

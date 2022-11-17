@@ -140,41 +140,29 @@ const App = () => {
       if (msg[i].sender.userId === USER_ID) {
         if (i === msg.length - 1) {
           message.push(
-            <h4 ref={myRef} style={{ marginTop: "0px", marginBottom: "10px" }}>
-              {msg[i].sender.nickname}{" "}
-              <span className="single-msg">{msg[i].message}</span>
-            </h4>
+              <p ref={myRef} className="sending-msg">{msg[i].message}</p>
           );
         } else {
           message.push(
-            <h4 style={{ marginTop: "0px", marginBottom: "10px" }}>
-              {msg[i].sender.nickname}{" "}
-              <span className="single-msg">{msg[i].message}</span>
-            </h4>
+              <p className="sending-msg">{msg[i].message}</p>
           );
         }
       } else {
         // setCalleeId(calledId => msg[i].sender.userId)
         if (i === msg.length - 1) {
           message.push(
-            <h4 ref={myRef} style={{ marginTop: "0px", marginBottom: "10px" }}>
-              {msg[i].sender.nickname}{" "}
-              <span className="single-msg">{msg[i].message}</span>
-            </h4>
+            <p ref={myRef} className="receiving-msg">
+              {msg[i].sender.nickname}{" "}{msg[i].message}
+            </p>
           );
         } else {
           message.push(
-            <h4
-              style={{
-                marginTop: "0px",
-                marginBottom: "10px",
-                alignSelf: "flex-end",
-                marginRight: "40px",
-              }}
+            <p
+              className="receiving-msg"
             >
               {msg[i].sender.nickname}{" "}
-              <span className="single-msg">{msg[i].message}</span>
-            </h4>
+              {msg[i].message}
+            </p>
           );
         }
       }
