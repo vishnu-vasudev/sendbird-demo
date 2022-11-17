@@ -291,7 +291,6 @@ const App = () => {
       </div>
       <button onClick={executeScroll}>click</button>
       {/* {executeScroll} */}
-      <video id="remote_video_element_id"></video>
     </>
   );
 };
