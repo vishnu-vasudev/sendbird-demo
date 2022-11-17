@@ -132,7 +132,6 @@ const App = () => {
   };
 
   const message: string[] = [];
-  const inputMessage: string[] = [];
 
   if (msg) {
     console.log(msg);
@@ -140,28 +139,25 @@ const App = () => {
       if (msg[i].sender.userId === USER_ID) {
         if (i === msg.length - 1) {
           message.push(
-              <p ref={myRef} className="sending-msg">{msg[i].message}</p>
+            <p ref={myRef} className="sending-msg">
+              {msg[i].message}
+            </p>
           );
         } else {
-          message.push(
-              <p className="sending-msg">{msg[i].message}</p>
-          );
+          message.push(<p className="sending-msg">{msg[i].message}</p>);
         }
       } else {
         // setCalleeId(calledId => msg[i].sender.userId)
         if (i === msg.length - 1) {
           message.push(
             <p ref={myRef} className="receiving-msg">
-              {msg[i].sender.nickname}{" "}{msg[i].message}
+              {msg[i].sender.nickname} {msg[i].message}
             </p>
           );
         } else {
           message.push(
-            <p
-              className="receiving-msg"
-            >
-              {msg[i].sender.nickname}{" "}
-              {msg[i].message}
+            <p className="receiving-msg">
+              {msg[i].sender.nickname} {msg[i].message}
             </p>
           );
         }
@@ -256,15 +252,15 @@ const App = () => {
       <button onClick={groupList}>channellist</button>
       <div className="display-flex container">
         <div className="example display-flex flex-column channel-list">
-          <h2 className="channel-header">All Channels</h2>
+          <h2 className="channel-header">Messages</h2>
           {channelNames.map((value) => (
-            <h4
+            <p
               key={value}
               onClick={() => handleClick(value)}
               className="channel-name"
             >
               {value}
-            </h4>
+            </p>
           ))}
         </div>
         <div className="msg-container">
@@ -279,19 +275,19 @@ const App = () => {
             <div className="example messages display-flex flex-column">
               {message}
             </div>
-            <div className="input-msg">
-                <input
-                  className="msg-input-box"
-                  onChange={(e) => setNewMessage(e.target.value)}
-                  placeholder="Type new message"
-                />
-                <button className="send-btn" onClick={sendMsg}>
-                  send
-                </button>
-            </div>
+            
           </div>
+          <div className="input-msg">
+              <input
+                className="msg-input-box"
+                onChange={(e) => setNewMessage(e.target.value)}
+                placeholder="Type new message"
+              />
+              <button className="send-btn" onClick={sendMsg}>
+                send
+              </button>
+            </div>
         </div>
-        <div></div>
       </div>
       <button onClick={executeScroll}>click</button>
       {/* {executeScroll} */}

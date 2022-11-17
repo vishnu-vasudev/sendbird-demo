@@ -16,7 +16,7 @@
 
 .container {
   margin-top: 50px;
-  height: 600px;
+  height: 900px;
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
@@ -24,7 +24,7 @@
 
 .channel-header {
   text-align: center;
-  color: cadetblue;
+  color: grey;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 0px;
 }
@@ -45,6 +45,7 @@
   padding-bottom: 65px;
   text-align: center;
   color: black;
+  font-weight: 500;
   border-bottom: 3px #f5f5f5 solid;
 }
 
@@ -68,14 +69,14 @@
 }
 
 .msg-container {
-  width: 60%;
+  width: 80%;
   background-color: #f4f4f4;
   border-left: 1px black solid;
 }
 
 .messages {
   overflow: scroll;
-  height: 460px;
+  height: 750px;
   margin-bottom: 5px;
   padding-left: 30px;
 }
